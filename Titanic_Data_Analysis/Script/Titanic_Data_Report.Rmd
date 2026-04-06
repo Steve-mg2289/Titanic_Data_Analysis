@@ -1,0 +1,31 @@
+---
+title: "Titanic Data Analysis Report"
+author: "Stephen Mariga"
+date: "2026-04-06"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Introduction
+
+This report analyzes the Titanic dataset to understand factors affecting survival.
+
+# Data Cleaning
+
+- Handled missing values in `Age` (177 missing replaced with median)
+- Removed unnecessary variables like `Cabin`
+- Checked for duplicates and corrected data types
+
+# Data Visualization
+
+```{r}
+library(ggplot2)
+# Example: Survival count
+ggplot(data, aes(x = Survived)) +
+  geom_bar(fill = "steelblue")
+```
+> Every code chunk is enclosed in ```{r} ... ``` so R runs it and includes results in the report.  
+
+data <- read.csv("titanic_cleaned.csv")
+
