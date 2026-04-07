@@ -48,4 +48,4 @@ summary(data)
 
 #clean data 
 write.csv(data, "titanic.csv.txt",row.names = FALSE)
-zip("titanic.csv.zip" , files = "titanic.csv.txt")
+
